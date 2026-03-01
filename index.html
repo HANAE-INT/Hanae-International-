@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HANAE International — Korean Skincare Manufacturer & Exporter</title>
+  <meta name="description" content="HANAE International Pvt. Ltd. — Korean skincare manufacturer, OEM/ODM and wholesale exporter. Headquarters Mumbai; manufacturing in Korea.">
+  <meta name="author" content="Kavya Sharma">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* -------------------------------------- */
+    /* 1. Global Variables & Base Reset */
+    /* -------------------------------------- */
+    :root {
+      /* Color Palette */
+      --color-primary: #b65fcf; /* Accent Purple */
+      --color-secondary: #ff9fb1; /* Accent Pink */
+      --color-dark: #1a1a1a;
+      --color-text: #333333;
+      --color-muted: #6b6b6b;
+      --color-bg: #f8f6fb; /* Lighter BG */
+      --color-card: #ffffff;
+      --color-glass: rgba(255, 255, 255, 0.85);
+
+      /* Layout */
+      --max-width: 1200px;
+      --spacing-unit: 1rem; /* 16px */
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Typography Defaults */
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--color-dark);
+      line-height: 1.2;
+    }
+    
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--color-secondary);
+    }
+    
+    /* Utility Classes */
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px; /* Default horizontal padding */
+    }
+
+    .small {
+      font-size: 0.8125rem; /* 13px */
+      color: var(--color-muted);
+    }
+
+    /* -------------------------------------- */
+    /* 2. Header / Navigation */
+    /* -------------------------------------- */
+    header {
+      position: sticky; /* Changed from fixed to sticky for a modern feel */
+      top: 0;
+      z-index: 60;
+      backdrop-filter: blur(8px);
+      background: var(--color-glass);
+      border-bottom: 1px solid rgba(180, 150, 200, 0.15);
+      box-shadow: 0 4px 18px rgba(10, 10, 10, 0.04);
+      transition: background 0.3s ease;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand img {
+      height: 48px; /* Slightly smaller logo */
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .brand h1 {
+      font-size: 1.125rem; /* 18px */
+      margin: 0;
+    }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--color-dark);
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: rgba(182, 95, 207, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .cta-top {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(182, 95, 207, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .cta-top:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(182, 95, 207, 0.4);
+    }
+
+    /* -------------------------------------- */
+    /* 3. Hero Section */
+    /* -------------------------------------- */
+    .hero {
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .parallax-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://i.postimg.cc/bNJ53TTx/Chat-GPT-Image-Oct-16-2025-10-58-47-PM.png');
+      background-size: cover;
+      background-position: center;
+      transform: translateZ(0);
+      filter: brightness(0.9) saturate(1.02);
+      transition: transform 0.1s ease-out; /* Smooths the parallax */
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(250, 246, 252, 0.7), rgba(255, 255, 255, 0.85));
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 2rem;
+      align-items: center;
+      padding: 0; /* Handled by .wrap */
+    }
+
+    .eyebrow {
+      color: var(--color-primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem; /* 12px */
+      margin-bottom: 0.5rem;
+    }
+
+    .headline {
+      font-size: 3.5rem; /* 56px - Bolder headline */
+      line-height: 1.05;
+      color: var(--color-dark);
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    /* Animation CSS remains the same for the walking effect */
+    .headline .walk {
+      display: inline-block;
+      transform: translateY(20%);
+      opacity: 0;
+      animation: walkIn 900ms cubic-bezier(.2, .9, .2, 1) forwards;
+    }
+    .headline .walk.delay-1{animation-delay:.08s}
+    .headline .walk.delay-2{animation-delay:.16s}
+    .headline .walk.delay-3{animation-delay:.24s}
+    .headline .walk.delay-4{animation-delay:.32s}
+    .headline .walk.delay-5{animation-delay:.40s}
+    .headline .walk.delay-6{animation-delay:.48s}
+    .headline .walk.delay-7{animation-delay:.56s}
+    @keyframes walkIn {
+      from { transform: translateY(24%) rotateX(6deg); opacity: 0 }
+      to { transform: translateY(0) rotateX(0); opacity: 1 }
+    }
+
+    .lead {
+      color: var(--color-text);
+      margin-top: 1.5rem;
+      font-size: 1.125rem; /* 18px - Larger lead text */
+      max-width: 680px;
+    }
+
+    .hero-cta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* Button styles */
+    .btn {
+      padding: 0.875rem 1.5rem; /* 14px 24px */
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 700;
+      text-align: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(182, 95, 207, 0.3);
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(182, 95, 207, 0.45);
+    }
+
+    .btn-ghost {
+      background: var(--color-card);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: var(--color-text);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .btn-ghost:hover {
+        background: var(--color-bg);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Right card */
+    .hero-card {
+      background: var(--color-card);
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(12, 12, 12, 0.1);
+    }
+
+    .owner {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .owner img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 16px rgba(8, 8, 8, 0.1);
+    }
+
+    .owner h3 {
+      margin: 0;
+      font-size: 1.25rem; /* 20px */
+    }
+
+    .meta {
+      color: var(--color-muted);
+      font-size: 0.9375rem; /* 15px */
+    }
+    
+    /* India Launch Announcement Styling */
+    #india-launch {
+        background: linear-gradient(135deg, #fceeff, #ffeef8); /* Soft gradient for emphasis */
+        border-top: 5px solid var(--color-primary);
+        border-bottom: 5px solid var(--color-secondary);
+        padding: 3rem 0;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(182, 95, 207, 0.1);
+    }
+    
+    #india-launch h3 {
+        color: var(--color-primary);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #india-launch .announcement-text {
+        font-size: 1.125rem;
+        color: var(--color-dark);
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
+    }
+
+    /* -------------------------------------- */
+    /* 4. Sections & Components */
+    /* -------------------------------------- */
+    section {
+      padding: 5rem 0; /* Consistent vertical padding for sections */
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.25rem; /* 36px - Larger section title */
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--color-muted);
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.0625rem; /* 17px */
+    }
+
+    /* Grid Layouts */
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      background: var(--color-card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(10, 10, 10, 0.05);
+      transform: translateY(12px);
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(.2, .9, .2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border for depth */
+    }
+
+    .card.visible {
+      transform: none;
+      opacity: 1;
+    }
+    
+    /* Dedicated Section Styles */
+
+    /* About layout */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 450px; /* Slightly larger image column */
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 18px 38px rgba(8, 8, 8, 0.08);
+    }
+    
+    /* Core Values */
+    #values .icon-card {
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+    
+    #values .icon-card h4 {
+        margin-top: 0.5rem;
+        font-size: 1.125rem;
+    }
+    
+    #values .icon {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        line-height: 1;
+    }
+    
+    /* Factory capabilities */
+    .feature-list-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .feature {
+        padding: 1.25rem;
+        border-radius: 10px;
+        background: var(--color-card);
+        box-shadow: 0 8px 20px rgba(12, 12, 12, 0.03);
+        border-left: 4px solid var(--color-secondary);
+    }
+    
+    .feature h4 {
+        margin-bottom: 0.25rem;
+        font-size: 1.125rem;
+    }
+
+    /* Products */
+    .prod-card {
+        padding: 1rem;
+        border-bottom: 4px solid transparent;
+        transition: border-bottom 0.3s ease;
+    }
+    
+    .prod-card:hover {
+        border-bottom: 4px solid var(--color-primary);
+        box-shadow: 0 20px 50px rgba(10, 10, 10, 0.08);
+    }
+
+    .prod-card img {
+      width: 100%;
+      height: 280px; /* Taller product images */
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .prod-meta {
+      color: var(--color-muted);
+      font-size: 0.875rem; /* 14px */
+      margin-top: 0.75rem;
+    }
+
+    /* Gallery */
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive gallery */
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px; /* Taller gallery images */
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.03);
+    }
+
+    /* Testimonials */
+    .test-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial {
+      padding: 2rem;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #fff, #fbfaff);
+      box-shadow: 0 12px 36px rgba(10, 10, 10, 0.04);
+      border-top: 3px solid var(--color-primary);
+    }
+    
+    .testimonial strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--color-dark);
+    }
+
+    /* Contact & form */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.5fr; /* Adjusted ratio */
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      padding: 2rem;
+      border-radius: 16px;
+    }
+    
+    .contact-card h4 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .contact-card p.meta {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.375rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      background: #fdfdfd;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(182, 95, 207, 0.1);
+        outline: none;
+    }
+
+    .submit-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .success-msg {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #eaf6f0, #eaf3ff);
+      color: #1b5e44;
+      border: 1px solid #cceedd;
+    }
+
+    .success-msg.show {
+      display: block;
+      animation: pop 0.45s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.98); opacity: 0 }
+      to { transform: none; opacity: 1 }
+    }
+    
+    /* -------------------------------------- */
+    /* 5. Footer */
+    /* -------------------------------------- */
+    footer {
+      background: var(--color-dark);
+      color: #fff;
+      padding: 3rem 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-inner a {
+      color: #fff;
+      transition: color 0.2s ease;
+    }
+    
+    .footer-inner a:hover {
+        color: var(--color-secondary);
+    }
+
+    .footer-inner strong {
+        display: block;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* -------------------------------------- */
+    /* 6. Media Queries (Responsiveness) */
+    /* -------------------------------------- */
+    @media(max-width: 1100px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-grid img { margin-top: 1.5rem; }
+      .feature-list-wrap { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width: 820px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .headline { font-size: 2.5rem; }
+      .lead { font-size: 1rem; }
+      .hero-card { margin-top: 1.5rem; }
+      nav { display: none; } /* Hide primary nav on smaller screens */
+      .cols-3, .cols-2 { grid-template-columns: 1fr; }
+      #india-launch h3 { font-size: 1.5rem; }
+    }
+
+    @media(max-width: 520px) {
+      .headline { font-size: 2rem; }
+      .hero-cta { flex-direction: column; }
+      .btn { width: 100%; }
+      .nav-wrap { padding: 0.75rem 0; }
+      .brand img { height: 40px; }
+      .brand h1 { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav-wrap">
+      <div class="brand">
+        <img src="https://i.postimg.cc/QN1MD5MT/Screenshot-2.jpg" alt="HANAE Logo">
+        <div>
+          <h1>HANAE International Pvt. Ltd.</h1>
+          <div class="small">Korean Skincare Manufacturer · OEM / ODM · Wholesale Exporter</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#values">Values</a>
+        <a href="#factory">Factory</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a class="cta-top" href="#contact">Request Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Hero">
+    <div class="parallax-bg" id="parallaxBg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-left">
+        <div class="eyebrow">Manufacturer & Exporter</div>
+
+        <h2 class="headline" aria-hidden="true">
+          <span class="walk delay-1">HANAE</span>
+          <span class="walk delay-2">&nbsp;—</span>
+          <span class="walk delay-3">&nbsp;Authentic</span>
+          <span class="walk delay-4">&nbsp;Korean</span>
+          <span class="walk delay-5">&nbsp;Skincare</span>
+          <span class="walk delay-6">&nbsp;for</span>
+          <span class="walk delay-7">&nbsp;Global Wholesale</span>
+        </h2>
+
+        <p class="lead">We operate a certified Korean production facility and specialise in high-volume, GMP-standard manufacture of essences, serums, masks and cleansers. HANAE partners with distributors, retailers and brands for OEM/ODM private label production — ensuring consistent quality, compliant exports and refined packaging solutions.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Request Wholesale Quote</a>
+          <a class="btn btn-ghost" href="#products">View Products</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="owner">
+          <img id="ownerPhoto" src="https://i.postimg.cc/G3vP5j9p/photo-2026-03-01-22-19-34.jpg" alt="Ananya Sharma">
+          <div>
+            <h3>Kavya Sharma</h3>
+            <div class="meta">Founder &amp; CEO</div>
+            <div style="margin-top:10px;font-size:14px">Phone:+91 744 892 6557<br>Email: <a href="mailto:Hanaemumbai.reach@hotmail.com">Hanaemumbai.reach@hotmail.com</a></div>
+          </div>
+        </div>
+
+        <hr style="margin:1.25rem 0;border:none;border-top:1px solid rgba(200,180,220,0.18)">
+
+        <h4 style="font-family:Inter,sans-serif;font-size:1rem;font-weight:700;color:var(--color-dark)">Key Capabilities</h4>
+        <ul style="margin-top:0.5rem;color:var(--color-muted);line-height:1.8;list-style:disc;padding-left:1.5rem;font-size:0.9375rem;">
+          <li>Full-scale Korean manufacturing (in-house lines)</li>
+          <li>OEM / ODM private-label production & packaging</li>
+          <li>Quality control, stability & regulatory compliance</li>
+          <li>Export logistics and documentation for AU / EU</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+  
+  <section id="india-launch">
+    <div class="wrap">
+      <h3>🇰🇷 HANAE: Launching Soon in India! 🇮🇳</h3>
+      <p class="announcement-text">
+        Big News: We are excited to announce the launch of our full-service Korean skincare manufacturing and distribution capabilities right here in India in the next 7 months. 
+        We are establishing local warehousing, logistics, and account management to better serve Indian retailers, brands, and distributors with the purity and quality of authentic K-Beauty.
+      </p>
+      <a href="#contact" class="btn btn-primary">Partner with Us in India</a>
+    </div>
+  </section>
+
+
+  <section id="catalogue" style="background:linear-gradient(180deg, #fff, #fbf8ff);">
+    <div class="wrap">
+      <h3 class="section-title">HANAE Product Catalogue</h3>
+      <p class="section-sub">
+        Explore our full line of Korean skincare formulations and OEM/ODM solutions. 
+        All formulations are manufactured in our certified South Korean facility.
+      </p>
+
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="https://www.scribd.com/document/933930087/Hanae-Catalouge" target="_blank" class="btn btn-primary" style="font-size:1.125rem;">
+          <span style="font-size:1.5rem;line-height:1;">📘</span> View / Download Full Catalogue
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="values">
+    <div class="wrap">
+      <h3 class="section-title">Our Core Commitments</h3>
+      <p class="section-sub">We build our partnerships on three foundational pillars: Purity, Precision, and Performance at scale.</p>
+
+      <div class="grid cols-3">
+        <div class="card icon-card visible">
+          <div class="icon">✨</div>
+          <h4>Purity & Formulation</h4>
+          <p class="meta">Only the highest-grade, ethically sourced Korean natural actives. We ensure clean, safe, and effective formulations, free from harmful additives.</p>
+        </div>
+        
+        <div class="card icon-card visible" style="animation-delay: 0.1s;">
+          <div class="icon">🔬</div>
+          <h4>Precision & Compliance</h4>
+          <p class="meta">Rigorous in-house testing and full adherence to global GMP, EU, and AU regulatory standards. Batch-to-batch consistency is guaranteed.</p>
+        </div>
+        
+        <div class="card icon-card visible" style="animation-delay: 0.2s;">
+          <div class="icon">📈</div>
+          <h4>Performance & Scale</h4>
+          <p class="meta">Optimized manufacturing lines for high-volume, reliable output. We deliver products ready for global market entry, meeting your sales targets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" style="background:linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 250, 255, 0.9))">
+    <div class="wrap">
+      <h3 class="section-title">About HANAE International</h3>
+      <p class="section-sub">Founded in 2022 by Ananya Sharma, HANAE International is a vertically integrated Korean skincare manufacturer dedicated to delivering science-backed formulations at scale. We import from our Korean plant and manage global exports to Australia, New Zealand and Europe. We serve large retailers, distribution partners and brands seeking reliable manufacturing partners.</p>
+
+      <div class="about-grid">
+        <div class="card" id="aboutCard">
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.5rem;">Our Philosophy & Approach</h4>
+          <p class="meta">We combine the purity of natural actives with advanced Korean R&D to create efficacious skincare that performs. Our approach emphasises safety, sustainability and measurable results in every product batch.</p>
+
+          <h4 style="margin-top:1.5rem;font-size:1.25rem;">R&D & Formulation Partnership</h4>
+          <p class="meta">Our formulations are developed with established Korean labs and dermatologists to meet diverse market needs. From gentle hydrating essences to peptide-rich serums, every formula undergoes rigorous testing and stability checks before scaling.</p>
+
+          <h4 style="margin-top:1.5rem;font-size:1.25rem;">Wholesale, B2B, and Scale</h4>
+          <p class="meta">HANAE operates on wholesale terms only — tailored Minimum Order Quantities (MOQs), bulk cartons, and long-term supply agreements. We do not process single-piece retail orders; our systems are optimised for volume and consistency, ensuring the best value for our partners.</p>
+        </div>
+
+        <div>
+          <img src="https://i.pinimg.com/736x/a6/dc/b8/a6dcb86c18e707cd21780a98a147248f.jpg" alt="Factory Photo" style="width:100%;border-radius:12px">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="factory">
+    <div class="wrap">
+      <h3 class="section-title">Korean Manufacturing Facility</h3>
+      <p class="section-sub">Our state-of-the-art manufacturing plant in South Korea uses automated lines and robust Quality Assurance (QA) processes designed for international export. We maintain strict GMP practices, in-house stability testing and offer sustainable packaging options.</p>
+
+      <div class="feature-list-wrap">
+        <div class="card feature visible">
+          <h4><span style="color:var(--color-secondary);">01.</span> Automated Production</h4>
+          <p class="meta">Multiple dedicated production lines for essences, serums and masks, with high-speed filling and inspection machinery to support large-batch manufacturing runs efficiently.</p>
+        </div>
+
+        <div class="card feature visible" style="animation-delay: 0.1s;">
+          <h4><span style="color:var(--color-secondary);">02.</span> Quality & Testing Labs</h4>
+          <p class="meta">In-house QC labs perform microbial, stability, and preservative efficacy testing on every single batch before it is released for global export, ensuring absolute product safety.</p>
+        </div>
+
+        <div class="card feature visible" style="animation-delay: 0.2s;">
+          <h4><span style="color:var(--color-secondary);">03.</span> Packaging & Customization</h4>
+          <p class="meta">We coordinate all private-label artwork, custom cartons, and sourcing of sustainable packaging materials — assisting with full regulatory labeling for target markets like EU and AU.</p>
+        </div>
+        
+        <div class="card feature visible" style="animation-delay: 0.3s;">
+          <h4><span style="color:var(--color-secondary);">04.</span> Supply Chain & Export</h4>
+          <p class="meta">Our expert logistics team manages all export documentation, customs clearance, and consolidated shipping to Australia, New Zealand, and Europe. We offer flexible CIF/FOB contract terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" style="background:linear-gradient(180deg, #fff, #fefeff);">
+    <div class="wrap">
+      <h3 class="section-title">Products & OEM Services</h3>
+      <p class="section-sub">Hand-picked lines created for wholesale distribution. All SKUs are produced in bulk cartons with full private-label options and flexible MOQs depending on packaging complexity and formula.</p>
+
+      <div class="grid cols-3" style="margin-top:2rem">
+        <article class="card prod-card visible">
+          <img src="https://i.pinimg.com/736x/c6/05/5f/c6055f7c81f619415e33718cfbaf024a.jpg" alt="Signature Essence">
+          <h4 style="margin-top:1rem;font-size:1.25rem;">Signature Brightening Essence</h4>
+          <p class="prod-meta">Concentrated fermented extracts for deep hydration & radiance. Wholesale packs: 30ml / 50ml cases with private label options and dropper/pump customization.</p>
+        </article>
+
+        <article class="card prod-card visible" style="animation-delay: 0.1s;">
+          <img src="https://i.pinimg.com/736x/c6/1d/42/c61d42b67520650d97f3eaf93bed9285.jpg" alt="Revitalizing Serum">
+          <h4 style="margin-top:1rem;font-size:1.25rem;">Revitalizing Peptide Serum</h4>
+          <p class="prod-meta">A potent, peptide-rich formula developed for firmness, elasticity, and tone. It is a highly stable formula suitable for large-batch production and bulk orders.</p>
+        </article>
+
+        <article class="card prod-card visible" style="animation-delay: 0.2s;">
+          <img src="https://i.pinimg.com/736x/14/3a/2a/143a2a6e1962a5079239c2dc11016eb3.jpg" alt="Sheet Masks">
+          <h4 style="margin-top:1rem;font-size:1.25rem;">Advanced Sheet Mask Collections</h4>
+          <p class="prod-meta">Single-use masks available in multiple collection assortments (Hydrating, Brightening, Calming). We provide custom artwork & bulk cartons for high-volume retailers.</p>
+        </article>
+      </div>
+
+      <div style="margin-top:2rem" class="card visible">
+        <h4 style="font-family:'Playfair Display',serif;font-size:1.5rem;">Private Label / OEM - End to End Service</h4>
+        <p class="meta">From initial formula sampling to full production runs, custom packaging design, and final shipment — HANAE provides comprehensive support at every step. Contact our dedicated account team for detailed MOQ, lead times, and specific pricing structures.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h3 class="section-title">Production & Product Gallery</h3>
+      <p class="section-sub">A visual look at our factory floor, finished product shots, and packaging samples from previous white-label projects.</p>
+
+      <div class="grid gallery" style="margin-top:2rem">
+        <img class="card visible" src="https://i.postimg.cc/TwNGqVft/Screenshot-2025-08-26-221614.jpg" alt="Production Line 1">
+        <img class="card visible" src="https://i.pinimg.com/736x/8d/e3/23/8de323f5bb0637fb84cfdb834aeac437.jpg" alt="Production Line 2">
+        <img class="card visible" src="https://i.postimg.cc/N0Jfpqx8/Screenshot-2025-08-26-221654.jpg" alt="Labeling Machine">
+        <img class="card visible" src="https://i.pinimg.com/736x/33/e9/2c/33e92c324c301c3444aeb59f44f465d9.jpg" alt="Filling Process">
+        <img class="card visible" src="https://i.postimg.cc/g0QbxYD7/Screenshot-2025-08-26-221742.jpg" alt="Packaged Products">
+        <img class="card visible" src="https://i.pinimg.com/736x/66/03/0a/66030ab57f0a0e0a724bd783bf79b34e.jpg" alt="Storage Area">
+        <img class="card visible" src="https://i.postimg.cc/cCd9HjVj/Screenshot-2025-08-26-221826.jpg" alt="Product Display 1">
+        <img class="card visible" src="https://i.pinimg.com/736x/c4/88/21/c488219ada1b7cdbff245715a476de6d.jpg" alt="Product Display 2">
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" style="background:linear-gradient(180deg, #fff, #fff7ff);">
+    <div class="wrap">
+      <h3 class="section-title">Partner Testimonials</h3>
+      <p class="section-sub">What our wholesale partners say about HANAE’s manufacturing quality, logistics reliability, and client service.</p>
+
+      <div class="test-row">
+        <blockquote class="testimonial card visible">
+          <strong>Leading Distributor — Australia</strong>
+          <p class="meta">“HANAE delivers consistent batch quality and impressively timely shipments to our port. Their OEM support allowed us to successfully launch a private-label line in under 12 weeks, which has exceeded our sales projections.”</p>
+        </blockquote>
+        <blockquote class="testimonial card visible" style="animation-delay: 0.1s;">
+          <strong>Major Retail Chain — Europe</strong>
+          <p class="meta">“We rely heavily on HANAE for their excellent export documentation and product stability testing. The level of regulatory compliance gives our buyers absolute confidence with every large shipment.”</p>
+        </blockquote>
+        <blockquote class="testimonial card visible" style="animation-delay: 0.2s;">
+          <strong>Emerging K-Beauty Brand — USA</strong>
+          <p class="meta">“The R&D team's formulation expertise is second to none. They seamlessly scaled our custom serum formula into large, stable, commercial batches while maintaining the original quality and efficacy.”</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:var(--color-card);">
+    <div class="wrap">
+      <h3 class="section-title">Contact & Wholesale Enquiries</h3>
+      <p class="section-sub">For pricing, MOQs, samples, and partnership discussions, contact our sales team. We respond only to verified trade enquiries and B2B partners seeking volume production.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card card visible">
+          <h4>Global Offices & Manufacturing Hubs</h4>
+          <p class="meta"><strong>Headquarters (India):</strong><br>Mindspace One BKC, G-Block Rd, Bandra Kurla Complex, Mumbai — 400051, India</p>
+          <p class="meta"><strong>Europe Office (Logistics):</strong><br>Regus, Strada C.A. Rosetti 17, Bucharest, Romania</p>
+          <p class="meta"><strong>Australia Office (Sales):</strong><br>152 St Georges Terrace (Central Park Tower), Perth WA 6000, Australia</p>
+          
+          <p class="meta" style="margin-top:1.5rem"><strong>Primary Manufacturing Hub:</strong><br>HANAE Production Facility, South Korea (Full address available to verified partners)</p>
+          
+          <hr style="margin:1.5rem 0;border:none;border-top:1px solid rgba(0,0,0,0.08)">
+
+          <p class="meta"><strong>Email:</strong> <a href="mailto:Hanaemumbai.reach@hotmail.com">Hanaemumbai.reach@hotmail.com</a><br><strong>Phone:</strong>+91 744 892 6557</p>
+        </div>
+
+        <aside class="card visible" style="padding:2rem;">
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.5rem;margin-top:0;">Request Quote / Partnership Form</h4>
+          <p class="meta">Provide your company details, target market, and specific product interests. We will contact verified businesses with a comprehensive catalog, current MOQs, and lead times.</p>
+
+          <form id="contactForm">
+            <label for="company">Company name</label>
+            <input id="company" name="company" required placeholder="Your company / distributor name">
+
+            <label for="contact_person">Contact person</label>
+            <input id="contact_person" name="contact_person" required placeholder="Name">
+
+            <label for="email">Business email</label>
+            <input id="email" name="email" type="email" required placeholder="name@company.com">
+
+            <label for="region">Region / Target Market</label>
+            <select id="region" name="region" required>
+              <option value="">Select region</option>
+              <option>Australia / New Zealand</option>
+              <option>Europe (EU/UK)</option>
+              <option>Middle East</option>
+              <option>Asia (excluding Korea)</option>
+              <option>North America</option>
+              <option>India (Coming Soon)</option> <option>Other</option>
+            </select>
+
+            <label for="message">Brief message (Indicate product interest, MOQ range, timelines)</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your wholesale inquiry"></textarea>
+
+            <div class="submit-row">
+              <button class="btn btn-primary" type="submit">Submit Enquiry</button>
+              <div id="formStatus" class="success-msg" role="status" aria-live="polite">
+                </div>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>
+        <strong>HANAE International Pvt. Ltd.</strong>
+        <div class="small" style="margin-top:0.5rem">© 2022 HANAE International Pvt. Ltd. All rights reserved.</div>
+        <div class="small" style="margin-top:0.375rem">Email: <a href="mailto:Hanaemumbai.reach@hotmail.com">Hanaemumbai.reach@hotmail.com</a> · Phone:+91 744 892 6557</div>
+      </div>
+
+      <div style="text-align:right">
+        <div class="small">Global Branches: Bucharest, Romania · Perth, Australia</div>
+        <div class="small" style="margin-top:0.375rem">Headquarters: Mindspace One BKC, Mumbai, India</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Parallax simple: move background slightly on scroll
+    (function(){
+      const bg = document.getElementById('parallaxBg');
+      window.addEventListener('scroll', () => {
+        const sc = window.scrollY;
+        // subtle parallax transform
+        bg.style.transform = 'translateY(' + (sc * 0.16) + 'px) scale(1.03)';
+      }, {passive:true});
+    })();
+
+    // Reveal cards on scroll using IntersectionObserver
+    (function(){
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          // Changed threshold to 0.18 for better visibility trigger
+          if (e.isIntersecting) e.target.classList.add('visible');
+        });
+      }, {threshold: 0.18});
+
+      document.querySelectorAll('.card').forEach(c => obs.observe(c));
+      
+      // Ensure the "walk" headline animation plays once on load
+      const headlineWalks = document.querySelectorAll('.walk');
+      headlineWalks.forEach(w => w.style.opacity = 0);
+      // small delay to ensure CSS animations play
+      setTimeout(()=> headlineWalks.forEach(w => w.style.opacity = 1), 40);
+    })();
+
+    // Contact form handling: show inline success message
+    (function(){
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        
+        // Show success message (styled) and clear inputs
+        status.innerHTML = '<strong>Thank you — we will contact you soon.</strong><div style=\"font-size:13px;color:#555;margin-top:6px\">Our sales team will review your details and reach out within 48 hours on business days.</div>';
+        status.classList.add('show');
+
+        // Clear form fields
+        form.querySelectorAll('input, textarea, select').forEach(el => { 
+            if (el.type !== 'email' && el.tagName.toLowerCase() !== 'select' && el.tagName.toLowerCase() !== 'textarea') {
+                el.value = '';
+            } else if (el.tagName.toLowerCase() === 'textarea') {
+                 el.value = '';
+            } else if (el.tagName.toLowerCase() === 'select') {
+                 el.selectedIndex = 0;
+            }
+        });
+
+        // Auto-hide success after 8 seconds
+        setTimeout(()=> status.classList.remove('show'), 8000);
+      });
+    })();
+  </script>
+  <script src="//code.tidio.co/2ns4fiirah4ucehizhbtspxjancbkfxy.js" async></script>
+</body>
+</html>
